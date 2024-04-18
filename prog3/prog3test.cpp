@@ -13,13 +13,19 @@ main()
 
    for (int i = 0; i < 10; i++)
 	{
-	   Stuff3 s;
-	   vec.push_back(s);
+      if (i > 3) {
+         Stuff3 s(false, 100, 100, 100);
+         vec.push_back(s);
+      }
+      else {
+         Stuff3 s;
+         vec.push_back(s);
+      }
 	}
 
    for (int i = 0; i < 10; i++)
 	{
-	   cout << vec[i] << endl;
+	   cout << "[" << i << "]: " << vec[i] << endl;
 	}
 
    cout << "-----\n";
